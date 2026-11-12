@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp5.Vistas.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="logo.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a submarine number ten" />
+
+
+            <Label Text="Descripcion del Producto"
+                    FontSize="18"
+                    HorizontalOptions="Center" />
+            <Entry x:Name="Descripcion" 
+                   Placeholder="Ingrese la descripcion del producto" />
+
+            
+            <Label Text="Precio del Producto"
+                    FontSize="18"
+                    HorizontalOptions="Center" />
+            <Entry x:Name="Precio"
+                   Placeholder="Ingrese el precio del producto" Keyboard="Numeric" />
+            
+
+            <Label Text="Stock del Producto"
+                    FontSize="18"
+                    HorizontalOptions="Center" />
+            <Entry x:Name="Stock"
+                   Placeholder="Ingrese el stock del producto" Keyboard="Numeric" />
+
+
+            <Image x:Name="ImagenProducto"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   BackgroundColor="Brown"/>
+            
+            <Button Text="Seleccionar Imagen"
+                    Clicked="SeleccionarImagen"
+                    HorizontalOptions="Center" 
+                    BackgroundColor="Cyan"
+                    TextColor="Red"/>
+
+
+            <Button
+                x:Name="CounterBtn"
+                Text="GUARDAR" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="Procesar"
+                HorizontalOptions="Fill" />
+
+
+            <Border StrokeShape="RoundRectangle 10"
+                    StrokeThickness="2"
+                    Stroke="Pink"
+                    BackgroundColor="Yellow">
+                <Grid x:Name="Dgv"
+                      ColumnSpacing="5"
+                      Margin="3,3,3,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="CODIGO" HorizontalTextAlignment="Center"></Label>
+                    <Label Grid.Row="0" Grid.Column="1" Text="DESCRIPCION" HorizontalTextAlignment="Center"></Label>
+                    <Label Grid.Row="0" Grid.Column="2" Text="PRECIO" HorizontalTextAlignment="Center"></Label>
+                    <Label Grid.Row="0" Grid.Column="3" Text="STOCK" HorizontalTextAlignment="Center"></Label>
+                    <Label Grid.Row="0" Grid.Column="4" Text="IMAGEN" HorizontalTextAlignment="Center"></Label>
+
+                </Grid>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
